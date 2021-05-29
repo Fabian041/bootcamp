@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrom</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Palindrom dengan Javascript</h1>
+
+
+    <script>
+
+        function checkPalindrome(num){
+
+            const len = num.length;
+            for(let i=0; i<len/2; i++){
+                
+                if(num[i] !== num[len - 1 - i]){
+                    alert("Bukan palindrom");
+                }
+                
+            }
+
+            alert(`${num} merupakan bilangan palindrom`);
+            
+        }
+    
+        const number = prompt("Masukkan Bilangan: ");
+        const validate = checkPalindrome(number);
+    
+        console.log(validate);
+        
+    </script>
+
+</body>
+</html>

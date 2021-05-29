@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Reverse dengan Javascript</h1>
+
+
+    <script>
+
+        function reverse(num){
+            const len = num.length;
+            let temp = 0;
+
+            for(let i=0; i<len/2; i++){
+                temp = num[len - 1 - i];
+                num[len - 1 - i] = num[i];
+                num[i] = temp;
+            }
+            return num;
+        }
+    
+        const input = [19,22,3,28,26,17,18,4,28,0];
+        console.log(input);
+
+        const reversed = reverse(input);
+        console.log(reversed);
+        
+    </script>
+
+</body>
+</html>
